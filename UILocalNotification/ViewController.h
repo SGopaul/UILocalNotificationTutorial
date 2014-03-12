@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    
+    NSDate *dateTime;
+    
+}
+
+- (IBAction)datePicker:(UIDatePicker *)sender;
+- (IBAction)setNotification:(id)sender;
 
 @end
