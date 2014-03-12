@@ -46,11 +46,28 @@
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hey!"
-                                                    message:@"Notifications received will app is running!"
+                                                    message:@"Notifications received while app is running!"
                                                    delegate:nil
                                           cancelButtonTitle:@"Ok"
                                           otherButtonTitles:nil, nil];
     [alert show];
+    
+    
+    /*NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.minute = 2;
+    
+    NSDate *now = [NSDate date];
+    NSDate *later = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:now options:0];
+    
+    // Creates the notification
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = later;
+    localNotification.alertBody = [NSString stringWithFormat:@"Alert fired at %@", later];
+    localNotification.soundName = UILocalNotificationDefaultSoundName;
+    localNotification.applicationIconBadgeNumber = 0;
+    
+    // And then sets it
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];*/
 }
 
 @end
